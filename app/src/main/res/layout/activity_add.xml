@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Barra superior -->
+    <include layout="@layout/barra_superior" />
+
+    <!-- Contenido del formulario -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/menu_inferior"
+        android:layout_below="@id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp">
+
+            <!-- Texto informativo antes del nombre de la medicina -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Medicamentos"
+                android:textSize="20sp"
+                android:textColor="@color/secondColor"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresa los datos correspondientes"
+                android:textSize="16sp"
+                android:textColor="@color/secondColor"
+                android:layout_marginBottom="40dp"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"/>
+
+            <!-- Campo Nombre de medicina -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Ej. Paracetamol"
+                android:textColor="@color/grayligth"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción:"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Ej. Alivia el dolor y la fiebre"
+                android:textColor="@color/grayligth"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precio:"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/etPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ej. 2.50"
+                android:inputType="numberDecimal"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/grayligth"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cantidad disponible:"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/etCantidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Ej. 50"
+                android:inputType="number"
+                android:textColor="@color/grayligth"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Laboratorio:"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerLaboratorio"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/black"
+                android:textAlignment="textStart"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="90dp"
+                android:backgroundTint="@color/primaryColor"
+                android:text="Guardar"
+                android:textSize="16dp"
+                app:cornerRadius="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Menú inferior -->
+    <include
+        android:id="@+id/menu_inferior"
+        layout="@layout/menu_inferior" />
+</RelativeLayout>

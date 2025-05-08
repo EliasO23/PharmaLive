@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "316756479074",
+    "project_id": "pharmalive-ff6b2",
+    "storage_bucket": "pharmalive-ff6b2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316756479074:android:bf401ecacb4d6b29ef553b",
+        "android_client_info": {
+          "package_name": "com.unab.pharmaliveapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMABiuI0ucIm5n62bdiZVzqB0bI5vKNkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

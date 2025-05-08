@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Estado enfocado (cuando el usuario toca el campo) -->
+    <item android:color="@color/primaryColor" android:state_focused="true"/>
+
+    <!-- Estado habilitado pero sin foco (transparente) -->
+    <item android:color="@android:color/transparent" android:state_enabled="true"/>
+
+    <!-- Por defecto -->
+    <item android:color="@color/grayligth"/>
+</selector>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PharmaLive App</string>
+
+    <string-array name="laboratorios">
+        <item>Bayer</item>
+        <item>Pfizer</item>
+        <item>Roche</item>
+        <item>Sanofi</item>
+    </string-array>
+
+</resources>

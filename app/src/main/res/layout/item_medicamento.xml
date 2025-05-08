@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvNombreMedicamento"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/ivEditarMedicamento"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/pencil"
+        android:tint="@color/primaryColor" />
+</LinearLayout>

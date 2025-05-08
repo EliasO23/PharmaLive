@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <!-- Título de la aplicación -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@mipmap/authlogo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido a"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PharmaLive"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Campo de nombre de usuario -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/primaryColor"
+        app:hintTextColor="@color/primaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/primaryColor"
+            android:textColorHint="@color/primaryColor"
+            android:textCursorDrawable="@drawable/custom_cursor"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/box_stroke_color"
+        app:hintTextColor="@color/primaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="@color/primaryColor"
+            android:textColorHint="@color/primaryColor"
+            android:textCursorDrawable="@drawable/custom_cursor"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Enlace para olvidar contraseña -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="24dp"
+        android:text="Olvide mi contraseña?"
+        android:textColor="@color/primaryColor" />
+
+    <!-- Botón de inicio de sesión -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/primaryColor"
+        android:text="Ingresar"
+        android:textColor="@color/white"
+        app:cornerRadius="10dp" />
+
+    <!-- Texto "Or login with" -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="O login con"
+        android:textColor="@color/gray" />
+
+    <!-- Botón de inicio de sesión con Google -->
+    <!--<com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"/>-->
+
+    <!-- Enlace para registro -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/textQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No tienes cuenta? "
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/textRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrate aqui"
+            android:textColor="@color/primaryColor"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+
+</LinearLayout>
