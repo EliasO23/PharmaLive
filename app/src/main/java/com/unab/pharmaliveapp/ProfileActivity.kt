@@ -2,11 +2,13 @@ package com.unab.pharmaliveapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
@@ -36,12 +38,27 @@ class ProfileActivity : BaseActivity() {
         tvEmail = findViewById(R.id.tvProfileEmail)
         ivProfile = findViewById(R.id.ivProfileImage)
 
+        val btnLogout = findViewById<Button>(R.id.btnLogout)
+        btnLogout.setOnClickListener {
+            auth.signOut() // Cierra la sesión en Firebase
+
+            val intent = Intent(this, AuthActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        }
+
+
         user?.let {
             tvEmail.text = it.email
             tvUsername.text = it.displayName ?: "Usuario sin nombre"
             // Puedes cargar una imagen desde URL si guardaste una en el perfil
             // Glide.with(this).load(it.photoUrl).into(ivProfile)
         }
+
+        val imageView = findViewById<CircleImageView>(R.id.ivProfileImage)
+        imageView.setColorFilter(ContextCompat.getColor(this, R.color.primaryColor))
+
 
         // Referencias
         val ivInicio = findViewById<ImageView>(R.id.ivInicio)

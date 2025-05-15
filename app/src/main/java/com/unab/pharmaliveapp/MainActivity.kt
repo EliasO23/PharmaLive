@@ -78,26 +78,32 @@ class MainActivity : BaseActivity() {
 
         btnMedicina.setOnClickListener {
             startActivity(Intent(this, MedicineActivity::class.java))
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         btnBuscar.setOnClickListener {
             startActivity(Intent(this, SearchActivity::class.java))
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         btnPerfil.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         btnAgregar.setOnClickListener {
             startActivity(Intent(this, AddActivity::class.java))
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         btnEditar.setOnClickListener {
             startActivity(Intent(this, SearchActivity::class.java))
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         btnEliminar.setOnClickListener {
             startActivity(Intent(this, SearchActivity::class.java))
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
 

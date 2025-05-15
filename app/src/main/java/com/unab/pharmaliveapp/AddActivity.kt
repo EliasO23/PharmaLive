@@ -13,6 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.database.DatabaseReference
@@ -73,15 +74,6 @@ class AddActivity : BaseActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listaConOpcionInicial)
         spinnerLaboratorio.adapter = adapter
 
-
-        /*val spinner: Spinner = findViewById(R.id.spinnerLaboratorio)
-        val adapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.laboratorios_array,
-            android.R.layout.simple_spinner_item
-        )
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner.adapter = adapter*/
 
         // Actualizar colores
         actualizarMenuActivo(

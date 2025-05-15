@@ -59,6 +59,22 @@ class RegisterActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Ingresa un correo electrónico válido", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (password.length < 8) {
+                Toast.makeText(this, "La contraseña debe tener al menos 8 caracteres", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            val passwordRegex = Regex("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[!@#\$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]).{8,}\$")
+            if (!password.matches(passwordRegex)) {
+                Toast.makeText(this, "La contraseña debe incluir letras, números y símbolos", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             if (!cbTerms.isChecked) {
                 Toast.makeText(this, "Debes aceptar los términos y condiciones", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener

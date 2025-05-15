@@ -8,4 +8,7 @@
         <item>Sanofi</item>
     </string-array>
 
+    <string name="default_web_client_id">316756479074-3gtbritjt71qp7nmaeb3dqv315cdbd31.apps.googleusercontent.com</string>
+
+
 </resources>

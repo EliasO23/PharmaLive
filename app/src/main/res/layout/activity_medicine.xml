@@ -7,14 +7,27 @@
     <!-- Barra superior -->
     <include layout="@layout/barra_superior" />
 
+    <ImageView
+        android:id="@+id/ivMedicamentos"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/topBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/medicamentos" />
+
+    <!-- Menú inferior -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerProductos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/topBar"
+        android:layout_below="@id/ivMedicamentos"
+        android:layout_above="@id/menu_inferior"
+        android:layout_marginTop="-5dp"
         android:padding="8dp" />
 
-    <!-- Menú inferior -->
-    <include layout="@layout/menu_inferior" />
+    <include
+        android:id="@+id/menu_inferior"
+        layout="@layout/menu_inferior" />
 
 </RelativeLayout>
